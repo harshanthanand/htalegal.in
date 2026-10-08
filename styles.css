@@ -1,0 +1,1238 @@
+/* =====================================================
+   HTA LEGAL
+   GLOBAL STYLES
+===================================================== */
+
+:root {
+
+    --black: #080808;
+    --white: #ffffff;
+    --off-white: #f7f7f5;
+    --light-grey: #e2e2e0;
+    --mid-grey: #777777;
+    --dark-grey: #222222;
+
+    --serif:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    --sans:
+        "Inter",
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+
+    font-family: var(--serif);
+
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    width: min(
+        1180px,
+        calc(100% - 80px)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+
+    height: 78px;
+
+    border-bottom: 1px solid #ededed;
+
+    background: var(--white);
+
+    position: relative;
+
+    z-index: 100;
+}
+
+
+.header-container {
+
+    width: min(
+        1280px,
+        calc(100% - 80px)
+    );
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* =====================================================
+   TYPOGRAPHIC BRAND
+===================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    white-space: nowrap;
+}
+
+
+.brand-hta {
+
+    font-family: var(--serif);
+
+    font-size: 37px;
+
+    line-height: .8;
+
+    letter-spacing: -2px;
+
+    font-weight: 500;
+}
+
+
+.brand-divider {
+
+    width: 1px;
+
+    height: 29px;
+
+    background: var(--black);
+}
+
+
+.brand-legal {
+
+    font-family: var(--sans);
+
+    font-size: 15px;
+
+    letter-spacing: 5px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 31px;
+
+    margin-left: auto;
+}
+
+
+.main-nav a {
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-bottom: 1px solid transparent;
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+
+    letter-spacing: .7px;
+
+    transition:
+        border-color .2s ease;
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+
+    border-bottom-color: var(--black);
+}
+
+
+/* Header button removed — replaced by .header-social */
+
+/* Header social links */
+.header-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-link svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: transparent;
+    transition: background .15s ease;
+}
+
+.social-link:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    height: 410px;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+}
+
+
+.hero-brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.hero-hta {
+
+    font-family: var(--serif);
+
+    font-size: 104px;
+
+    line-height: .75;
+
+    letter-spacing: -5px;
+
+    font-weight: 500;
+}
+
+
+.hero-legal {
+
+    margin-top: 18px;
+
+    font-family: var(--sans);
+
+    font-size: 18px;
+
+    letter-spacing: 10px;
+
+    padding-left: 10px;
+}
+
+
+.hero-line {
+
+    width: 115px;
+
+    height: 1px;
+
+    background: rgba(255,255,255,.7);
+
+    margin-top: 20px;
+
+    margin-bottom: 14px;
+}
+
+
+.hero-subtitle {
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: .9;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+
+    padding-top: 90px;
+
+    padding-bottom: 90px;
+}
+
+
+.practice-section {
+
+    background: var(--white);
+}
+
+
+.section-label {
+
+    font-family: var(--sans);
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+}
+
+
+.section-label::after {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 65px;
+
+    height: 1px;
+
+    background: var(--black);
+
+    vertical-align: middle;
+
+    margin-left: 15px;
+}
+
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+.large-heading {
+
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        52px,
+        6vw,
+        78px
+    );
+
+    font-weight: 400;
+
+    line-height: .94;
+
+    letter-spacing: -2px;
+}
+
+
+/* =====================================================
+   PRACTICE GRID
+===================================================== */
+
+.practice-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: var(--light-grey);
+
+    margin-top: 55px;
+}
+
+/* =====================================================
+   BOX ROUNDED CORNERS
+   Apply soft rounding to grid containers and card-like boxes
+===================================================== */
+
+.practice-grid,
+.articles-grid,
+.civil-areas-grid,
+.contact-details-grid {
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.practice-card {
+
+    min-height: 270px;
+
+    padding: 31px;
+
+    background: var(--off-white);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.practice-card,
+.article-card,
+.contact-detail,
+.civil-area {
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.practice-card:hover {
+
+    background: var(--black);
+
+    color: var(--white);
+}
+
+
+.practice-number {
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--mid-grey);
+
+    margin-bottom: auto;
+}
+
+
+.practice-card h2 {
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 0 0 12px;
+}
+
+
+.practice-card p {
+
+    font-family: var(--sans);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: var(--mid-grey);
+
+    margin: 0;
+}
+
+
+.practice-card:hover p {
+
+    color: #cfcfcf;
+}
+
+
+.card-arrow {
+
+    font-family: var(--sans);
+
+    font-size: 19px;
+
+    margin-top: 22px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-section {
+
+    border-top: 1px solid var(--light-grey);
+
+    border-bottom: 1px solid var(--light-grey);
+}
+
+
+.about-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+.about-text {
+
+    max-width: 520px;
+
+    font-size: 21px;
+
+    line-height: 1.55;
+}
+
+
+.about-text p {
+
+    margin-top: 0;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   ARTICLES
+===================================================== */
+
+.articles-heading-row {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+
+.text-link {
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid var(--black);
+
+    white-space: nowrap;
+}
+
+
+.articles-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    border-top: 1px solid var(--light-grey);
+
+    border-left: 1px solid var(--light-grey);
+}
+
+
+.article-card {
+
+    min-height: 265px;
+
+    padding: 32px;
+
+    border-right: 1px solid var(--light-grey);
+
+    border-bottom: 1px solid var(--light-grey);
+}
+
+
+.article-meta {
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: var(--mid-grey);
+}
+
+
+.article-meta span {
+
+    margin: 0 5px;
+}
+
+
+.article-card h3 {
+
+    font-size: 30px;
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    margin: 25px 0 13px;
+}
+
+
+.article-card p {
+
+    font-size: 16px;
+
+    color: #555;
+
+    max-width: 500px;
+}
+
+
+.article-card a {
+
+    display: inline-block;
+
+    margin-top: 16px;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid var(--black);
+
+    padding-bottom: 4px;
+}
+
+
+/* =====================================================
+   CONTACT STRIP
+===================================================== */
+
+.contact-section {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    padding: 75px 0;
+}
+
+
+.contact-layout {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.contact-section h2 {
+
+    margin: 0;
+
+    font-size: clamp(
+        48px,
+        6vw,
+        75px
+    );
+
+    font-weight: 400;
+
+    line-height: .95;
+}
+
+
+.section-label.light {
+
+    color: var(--white);
+}
+
+
+.section-label.light::after {
+
+    background: var(--white);
+}
+
+
+.light-button {
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    color: var(--white);
+
+    padding: 15px 23px;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    border-top: 1px solid #333;
+
+    padding: 42px 0 50px;
+}
+
+
+.footer-layout {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 50px;
+}
+
+
+.footer-brand {
+
+    font-family: var(--sans);
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+}
+
+
+.footer-brand span {
+
+    margin: 0 7px;
+
+    opacity: .5;
+}
+
+
+.site-footer p {
+
+    font-family: var(--sans);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #aaa;
+}
+
+
+.site-footer .copyright {
+
+    margin-top: 30px;
+
+    letter-spacing: .5px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    color: #ddd;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .container,
+    .header-container {
+
+        width: min(
+            calc(100% - 50px),
+            1180px
+        );
+    }
+
+
+    .main-nav {
+
+        display: none;
+    }
+
+
+    .practice-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .about-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .container,
+    .header-container {
+
+        width:
+            calc(100% - 34px);
+    }
+
+
+    .site-header {
+
+        height: 68px;
+    }
+
+
+    .header-container {
+
+        gap: 15px;
+    }
+
+
+    .brand-hta {
+
+        font-size: 31px;
+    }
+
+
+    .brand-legal {
+
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .brand-divider {
+
+        height: 24px;
+    }
+
+
+    /* legacy .header-button removed */
+
+
+    .hero {
+
+        height: 300px;
+    }
+
+
+    .hero-hta {
+
+        font-size: 72px;
+    }
+
+
+    .hero-legal {
+
+        font-size: 14px;
+
+        letter-spacing: 7px;
+    }
+
+
+    .hero-subtitle {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .section {
+
+        padding-top: 65px;
+
+        padding-bottom: 65px;
+    }
+
+
+    .large-heading {
+
+        font-size: 48px;
+    }
+
+
+    .practice-grid {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+    }
+
+
+    .practice-card {
+
+        min-height: 225px;
+    }
+
+
+    .articles-heading-row {
+
+        display: block;
+    }
+
+
+    .text-link {
+
+        display: inline-block;
+
+        margin-top: 25px;
+    }
+
+
+    .articles-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .article-card {
+
+        min-height: auto;
+
+        padding: 28px 22px;
+    }
+
+
+    .article-card h3 {
+
+        font-size: 27px;
+    }
+
+
+    .contact-layout {
+
+        display: block;
+    }
+
+
+    .light-button {
+
+        display: inline-block;
+
+        margin-top: 30px;
+    }
+
+
+    .footer-layout {
+
+        display: block;
+    }
+
+
+    .footer-links {
+
+        justify-content: flex-start;
+
+        margin-top: 35px;
+    }
+
+}
+/* =====================================================
+   INDIVIDUAL PRACTICE AREA
+===================================================== */
+
+.civil-areas-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    border-top: 1px solid var(--light-grey);
+
+    border-left: 1px solid var(--light-grey);
+
+    margin-top: 38px;
+}
+
+
+.civil-area {
+
+    min-height: 235px;
+
+    padding: 32px;
+
+    background: var(--off-white);
+
+    border-right: 1px solid var(--light-grey);
+
+    border-bottom: 1px solid var(--light-grey);
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.civil-area:hover {
+
+    background: var(--black);
+
+    color: var(--white);
+}
+
+
+.civil-area > span {
+
+    display: block;
+
+    font-family: var(--sans);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--mid-grey);
+
+    margin-bottom: 55px;
+}
+
+
+.civil-area h2 {
+
+    margin: 0 0 12px;
+
+    font-family: var(--serif);
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.civil-area p {
+
+    margin: 0;
+
+    max-width: 470px;
+
+    font-family: var(--sans);
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    color: var(--mid-grey);
+}
+
+
+.civil-area:hover p {
+
+    color: #cfcfcf;
+}
+
+
+.civil-area:hover > span {
+
+    color: #aaa;
+}
+
+
+/* =====================================================
+   LEGISLATION
+===================================================== */
+
+.legislation-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    margin-top: 45px;
+}
+
+
+.legislation-text {
+
+    max-width: 520px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.legislation-text p {
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
+}
+
+
+.legislation-text ul {
+
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.legislation-text li {
+
+    margin-bottom: 13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .civil-areas-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .civil-area {
+
+        min-height: 210px;
+    }
+
+
+    .civil-area > span {
+
+        margin-bottom: 40px;
+    }
+
+
+    .legislation-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
